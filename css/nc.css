@@ -1,0 +1,30 @@
+.p {
+    word-wrap:break-word
+}
+
+.gear1 {
+    position: fixed;
+    z-index: 20;
+    left: -75px;
+    bottom: -75px;
+}
+
+.gear1 img {
+    height: 150px;
+    width: 150px;
+    transform: rotate(calc(var(--scrollTop) / 2.5 *360));
+}
+
+.gear2 {
+    position: fixed;
+    z-index: 20;
+    right: -75px;
+    bottom: -75px;
+    transform: rotate3d(0, calc(var(--scrollTop) / 2.5), 0, 10deg);     
+}
+
+.gear2 img {
+    height: 150px;
+    width: 150px;
+    transform: rotate3d(0, calc(var(--scrollTop) / 2.5), 0, 10deg);   
+}

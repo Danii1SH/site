@@ -1,0 +1,14 @@
+.image-conteiner {
+    height: 40vh;
+    width: 40vh;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.image-conteiner:hover {
+    transition-duration: .2s;
+    transition-delay: .1s;
+    transform: scale(1.05, 1.05);
+}

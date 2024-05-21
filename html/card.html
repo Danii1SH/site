@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/catalog.css">
+        <link rel="stylesheet" href="../css/cart.css">
+        <title>Наш гардероб</title>
+    </head>
+<body>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(97325088, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/97325088" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand  d-none d-lg-block" href="../index.html">
+                <img class="logo"src="../images/Logo.png" alt="">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="newCol.html">Новая коллекция</a>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Одежда
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../html/catalog.html">Платья</a></li>
+                        <li><a class="dropdown-item" href="../html/catalog.html">Юбки</a></li>
+                        <li><a class="dropdown-item" href="../html/catalog.html">Что-то ещё</a></li>
+                    </ul>
+              </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../html/catalog.html" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Аксессуары
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                        <li><a class="dropdown-item" href="../html/catalog.html">Часы</a></li>
+                    </ul>
+              </li>
+                <a class="nav-link d-lg-none" href="#">Корзина</a>
+            </div>
+          </div>
+          <a class="navbar-brand d-lg-none" href="../index.html">
+            <img class="logo"src="../images/Logo.png" alt="">           
+          </a>
+          <a class="navbar-brand d-none d-lg-block cart" href="../html/card.html">
+            <img src="../images/icon/cart.svg" alt="" style="width: 33px;">
+            <div class="count" id="countNav">
+                0
+            </div>
+          </a>
+        </div>
+    </nav>
+
+<!-- Модальное окно -->
+<div class="modal fade " id="chat" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Чат</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body" id="chatF">
+          <p>Здравствуйте! Я бот Олег.</p>
+        </div>
+        <div class="modal-footer">
+          <input class="form-control" id="inputChat" type="text" style="width: auto;">
+          <button type="button" class="btn btn-primary" onclick="sendMassage('human')">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <button class="chat-icon btn" data-bs-toggle="modal" data-bs-target="#chat">
+        <img src="../images/icon/chat.svg" alt="">
+    </button>
+
+
+    <main>
+        <div class="container-lg">
+            <div class="conteiner info-box">
+                <h5 id="count">Кол-во товаров: 1</h5>
+                <h5 id="sumPrice">Сумма: 6999</h5>
+                <button>Купить</button>
+            </div>
+            <div class="conteiner flex-fill" id="root">
+
+            </div>
+        </div>
+    </main>
+    <footer class="text-center pt-4 my-md-5 pt-md-5 border-top" style="overflow-x: hidden;">
+        <div class="row">
+            <div class="col-12 col-md">
+                <h5>Помощь</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="temp.html#1">Оплата</a></li>
+                    <li><a href="temp.html#2">Доставка</a></li>
+                    <li><a href="temp.html#3">Возврат и обмен</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md">
+                <h5>Компания</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="temp.html#4">О нас</a></li>
+                    <li><a href="temp.html#5">Наши магазины</a></li>
+                    <li><a href="temp.html#6">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md" >
+                <h5>Следите за нами</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="https://vk.ru" target="_blank">Vk</a></li>
+                    <li><a href="https://telegram.org" target="_blank">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/catalog.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../js/chat.js"></script>
+</body>
+
+</html>

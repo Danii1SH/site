@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+3:ital@1&display=swap');
+
+.image-header-md {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 50px;
+}
+
+.header-md {
+    min-height: 70px;
+    background-color: white;
+}
+
+.image-footer-md {
+    height: 150px;
+}
+
